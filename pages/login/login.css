@@ -56,6 +56,9 @@ i{
 nav{
 	position: fixed;
 	display: flex;
+	flex-direction: column;
+    gap: 60px;
+    padding: 40px 0;
 	z-index: 202;
 	left: 0px;
 	top: 96px;
@@ -80,6 +83,8 @@ nav div{
 nav a{
 	transition: 0s;
 	font-family: Verdana, sans-serif;
+	color: white;
+	text-decoration: none;
 }
 
 div{
