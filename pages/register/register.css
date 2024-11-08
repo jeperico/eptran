@@ -30,7 +30,7 @@ body {
     margin: 0px;
     flex-direction: column;
     justify-content: space-between;
-    background-color: bisque;
+    background-color: white;
 }
 
 header {
@@ -330,7 +330,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-	background-color: bisque;
+	background-color: white;
 }
 
 .form-container {
