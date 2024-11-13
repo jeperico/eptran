@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,54 +8,84 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         />
-        <link rel="stylesheet" href="./register.css" />
+        <link rel="stylesheet" href="Register.css" />
 
-        <title>Página de Cadastro</title>
+        <title>Template Eptran</title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
     <body>
         <header id="header">
-            <i class="fa-solid fa-bars" id="bar" onclick="collapse()"></i>			
-            <img src="/assets/images/logos/logo-eptran-white.png" id="logo" />
+            <i class="fa-solid fa-bars" id="bar" onclick="collapse()"></i>
+            <img src="img/epitrones.png" id="logo" />
             <i class="fa-solid fa-user"></i>
         </header>
-    
+
         <nav id="sideBar">
-            <a href="/pages/home/home.html">Página Inicial</a>
-            <a href="/pages/about-us/about-us.html">Quem somos Nós</a>
-            <a href="/pages/games/catalogue/catalogue.html">Jogos</a>
-            <a href="/pages/initial-series/initial-series.html">Séries Iniciais</a>
-            <a href="/pages/final-series/final-series.html">Séries Finais</a>
-            <a href="/pages/high-school/high-school.html">Ensino Médio</a>
+            <div>
+                <a> Página Inicial </a> <br />
+                <a> Pagina de Noticias </a> <br />
+                <a> Conteudos </a> <br />
+                <a> Quem somos Nós </a> <br />
+                <a> </a> <br />
+                <a> </a> <br />
+                <a> </a> <br />
+            </div>
         </nav>
-    
+
         <div id="overlay" onclick="collapse()"></div>
-    
+
         <div id="foca">
-            <img src="/assets/images/world-02.png" id="planet">
-            <img src="/assets/images/seal.png" class="fa-bounce" id="car">
+            <img src="img/planeta.png" id="planet" />
+            <img
+                src="img/IMG_4532-removebg-preview (1).png"
+                class="fa-bounce"
+                id="car"
+            />
         </div>
 
-        <main>
-            <form class="form-container">
-                <h2 class="form-title">CADASTRO</h2>
-                <input type="text" class="form-input" placeholder="Nome Completo" required>
-                <input type="date" class="form-input" required>
-                <input type="text" class="form-input" placeholder="Escola" required>
-                <label for="etapa-escolar" class="form-label">Etapa escolar:</label>
-                <select id="etapa-escolar" class="form-select" required>
-                    <option value="F1">Ensino Fundamental 1</option>
-                    <option value="F2">Ensino Fundamental 2</option>
-                    <option value="EM">Ensino Médio</option>
-                </select>
-                <label for="cep" class="form-label">Enter CEP:</label>
-                <input type="text" id="cep" class="form-input" placeholder="00000-000" maxlength="9" required>
-                <span class="row-container">
-                    <span>
-                        <label for="estado" class="form-label">Estado:</label>
-                        <select id="estado" class="form-select" required>
+        <div class="box">
+            <form id="content">
+                <h1>CADASTRO</h1>
+
+                <div class="form-section">
+                    <div class="input">
+                        <label for="nome">Nome:</label>
+                        <input name="nome" type="text" />
+                    </div>
+                    <div class="input">
+                        <label for="nascimento">Data Nascimento:</label>
+                        <input name="nascimento" type="date" />
+                    </div>
+                    <div class="input">
+                        <label for="escola">Escola:</label>
+                        <input name="escola" type="text" />
+                    </div>
+
+                    <div class="input">
+                        <label for="etapa-escolar">Etapa escolar:</label>
+                        <select id="etapa-escolar" name="etapa-escolar">
+                            <option value="F1">Ensino Fundamental 1</option>
+                            <option value="F2">Ensino Fundamental 2</option>
+                            <option value="EM">Ensino Médio</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="cep" class="form-label">CEP:</label>
+                        <input
+                            name="cep"
+                            type="text"
+                            id="cep"
+                            class="form-input"
+                            placeholder="00000-000"
+                            maxlength="9"
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label for="estado" class="form-label">UF:</label>
+                        <select id="estado" name="estado" class="form-select">
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
                             <option value="AP">AP</option>
@@ -78,33 +108,77 @@
                             <option value="RS">RS</option>
                             <option value="RO">RO</option>
                             <option value="RR">RR</option>
-                            <option value="SC" selected>SC</option>
+                            <option value="SC">SC</option>
                             <option value="SP">SP</option>
                             <option value="SE">SE</option>
                             <option value="TO">TO</option>
                         </select>
-                    </span>
-                    <span>
+                    </div>
+
+                    <div class="input">
                         <label for="cidade" class="form-label">Cidade:</label>
-                        <input type="text" id="cidade" class="form-input" placeholder="Cidade" value="Joinville" required>
-                    </span>
-                    <span>
+                        <input
+                            name="cidade"
+                            type="text"
+                            id="cidade"
+                            class="form-input"
+                        />
+                    </div>
+
+                    <div class="input">
                         <label for="bairro" class="form-label">Bairro:</label>
-                        <input type="text" id="bairro" class="form-input" placeholder="Bairro" required>
-                    </span>
-                </span>
-                
-                <input type="email" class="form-input" placeholder="Email" required>
-                <input type="password" class="form-input" placeholder="Senha" required>
-                <input type="password" class="form-input" placeholder="Repetir Senha" required>
-                <button type="submit" class="form-button">Cadastrar</button>
-                <a href="../login/login.html" class="form-link">Já possuo uma conta</a>
+                        <input
+                            name="bairro"
+                            type="text"
+                            id="bairro"
+                            class="form-input"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-section hidden">
+                    <div class="input">
+                        <label for="email" class="form-label">Email:</label>
+                        <input name="email" type="email" class="form-input" />
+                    </div>
+                    <div class="input">
+                        <label for="password" class="form-label">Senha:</label>
+                        <input
+                            name="password"
+                            type="password"
+                            class="form-input"
+                        />
+                    </div>
+                    <div class="input">
+                        <label for="repeat-password" class="form-label"
+                            >Repetir Senha:</label
+                        >
+                        <input
+                            name="repeat-password"
+                            type="password"
+                            class="form-input"
+                        />
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" id="change-section">Próximo</button>
+                    <button type="submit" id="send" class="hidden">
+                        Cadastrar
+                    </button>
+                </div>
+
+                <br />
+
+                <a href="../Login/Login.html" class="form-link"
+                    >Já possuo uma conta</a
+                >
             </form>
-        </main>
+        </div>
 
         <footer id="footer">
             <div>
-                <img src="/assets/images/logos/logo-02.png" />
+                <img src="img/Joinvillers.png" />
             </div>
 
             <div>
@@ -141,8 +215,8 @@
             </div>
         </footer>
 
-        <script src="/assets/scripts/header.js"></script>
-        <script src="./cep-search.js"></script>
+        <script src="Template.js"></script>
+        <script src="cep-search.js"></script>
         <script src="./change-form-section.js"></script>
     </body>
 </html>

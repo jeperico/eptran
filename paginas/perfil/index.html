@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            window.location.href = "/paginas/cadastrar"
+        </script>
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EPTRAN</title>
@@ -16,7 +20,6 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="/assets/styles/swiper.css" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="/assets/styles/main.css" />
@@ -33,7 +36,7 @@
                     alt=""
                     class="logo"
                 />
-                <a class="account-btn icon-btn">
+                <a href="/paginas/perfil" class="account-btn icon-btn">
                     <i class="fa-solid fa-circle-user"></i>
                 </a>
             </div>
@@ -101,44 +104,84 @@
 
         <main>
             <section>
-                <div class="container">
-                    <h1>Meu Perfil</h1>
-                    <div class="data">
-                        <h2>Dados do Usuário</h2>
-                        <div class="data-grid">
-                            <span
-                                >Nome:
-                                <span class="name">Gelson da Silva Santos</span>
-                            </span>
-                            <span
-                                >Email:
-                                <span class="email">gelsin@gmail.com</span>
-                            </span>
-                            <span
-                                >Etapa Escolar:
-                                <span class="school-level">---</span>
-                            </span>
-                            <span
-                                >Escola:
-                                <span class="school">---</span>
-                            </span>
-                            <span
-                                >Gênero:
-                                <span class="gender">Masculino</span>
-                            </span>
-                            <span
-                                >UF:
-                                <span class="uf">Santa Ctarina</span>
-                            </span>
-                            <span
-                                >Cidade: <span class="city">Joinville</span>
-                            </span>
-                            <span
-                                >Bairro:
-                                <span class="neighboorhood">Bucarein</span>
-                            </span>
-                        </div>
+                <div class="profile">
+                    <div class="pic">
+                        <img
+                            src="/assets/images/members/person.png"
+                            alt="Fulano de Tal"
+                        />
                     </div>
+                    <div class="id">
+                        <span class="name">Fulano de Tal</span>
+                        <span class="enter-date">Entrou em 29/06/2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="selectors">
+                    <button class="info selected">
+                        Informações do Usuário
+                    </button>
+                    <button class="security">Seguraça</button>
+                </div>
+            </section>
+
+            <section class="data info">
+                <div class="field">
+                    <span>Gênero: </span>
+                    <span class="value gender">Masculino</span>
+                </div>
+                <div class="field">
+                    <span>Data de Nascimento: </span>
+                    <span class="value birthdate">27/05/1992</span>
+                </div>
+                <div class="field">
+                    <span>Escola: </span>
+                    <span class="value school"
+                        >Escola SESI de Referência de Joinville</span
+                    >
+                </div>
+                <div class="field">
+                    <span>Etapa Escolar: </span>
+                    <span class="value school-level">Ensino Médio</span>
+                </div>
+                <div class="field">
+                    <span>UF: </span>
+                    <span class="value uf">SC</span>
+                </div>
+                <div class="field">
+                    <span>Cidade: </span>
+                    <span class="value dity">Joinville</span>
+                </div>
+                <div class="field">
+                    <span>Bairro: </span>
+                    <span class="value neighborhood">Bucarein</span>
+                </div>
+            </section>
+
+            <section class="data security hidden">
+                <div class="field">
+                    <span>Email: </span>
+                    <span class="value email">fulanin@mail.com</span>
+                    <button class="edit none">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="field">
+                    <span>Senha: </span>
+                    <span class="value password">············</span>
+                    <button class="edit none">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section>
+                <div class="profile-update">
+                    <button class="edit">Editar Perfil</button>
+                    <button class="save hidden">Salvar</button>
                 </div>
             </section>
         </main>
@@ -190,8 +233,26 @@
         </footer>
 
         <script>
-            var navBtn = document.querySelector(".nav-btn");
-            var navModalBg = document.querySelector("header .modal .bg");
+            let infoBtn = document.querySelector(".selectors .info");
+            let securityBtn = document.querySelector(".selectors .security");
+            let infoSection = document.querySelector("section.data.info");
+            let securitySection = document.querySelector("section.data.security");
+
+            infoBtn.addEventListener("click", () => {
+                infoSection.classList.remove("hidden");
+                securitySection.classList.add("hidden");
+            });
+
+            securityBtn.addEventListener("click", () => {
+                infoSection.classList.add("hidden");
+                securitySection.classList.remove("hidden");
+            });
+            
+        </script>
+
+        <script>
+            let navBtn = document.querySelector(".nav-btn");
+            let navModalBg = document.querySelector("header .modal .bg");
 
             navBtn.addEventListener("click", () => {
                 document
@@ -204,8 +265,6 @@
                 document.querySelector(".sidebar").classList.toggle("hide");
                 document.querySelector(".modal").classList.toggle("hide");
             });
-
-            btn.addEventListener("click", () => {});
         </script>
 
         <!-- Swiper JS -->
