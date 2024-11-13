@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./form.css" />
+
+        <title>Login</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <i class="fa-solid fa-bars" id="bar" onclick="collapse()"></i>
+            <img src="/assets/images/logos/logo-eptran-white.png" id="logo" />
+            <i class="fa-solid fa-user"></i>
+        </header>
+
+        <nav id="sideBar">
+            <a href="/pages/home/home.html">Página Inicial</a>
+            <a href="/pages/about-us/about-us.html">Quem somos Nós</a>
+            <a href="/pages/games/catalogue/catalogue.html">Jogos</a>
+            <a href="/pages/initial-series/initial-series.html"
+                >Séries Iniciais</a
+            >
+            <a href="/pages/final-series/final-series.html">Séries Finais</a>
+            <a href="/pages/high-school/high-school.html">Ensino Médio</a>
+        </nav>
+
+        <div id="overlay" onclick="collapse()"></div>
+
+        <div id="foca">
+            <img src="/assets/images/world-02.png" id="planet" />
+            <img src="/assets/images/seal.png" class="fa-bounce" id="car" />
+        </div>
+
+        <div class="box">
+            <div id="content">
+                <h1>ENTRAR</h1>
+                <div class="input">
+                    <label for="email">Email:</label>
+                    <input type="email" />
+                </div>
+                <div class="input">
+                    <label for="password">Senha:</label>
+                    <input type="password" />
+                </div>
+                <div class="links">
+                    <p>
+                        <a href="./change-password-request.html"
+                            >Esqueci minha senha</a
+                        >
+                    </p>
+                    <p>
+                        <a href="../register/register.html">Não possuo conta</a>
+                    </p>
+                </div>
+                <button id="send">Entrar</button>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div>
+                <img src="/assets/images/logos/logo-02.png" />
+            </div>
+
+            <div>
+                <a>
+                    Informações de Contato <br />
+                    <hr style="color: white" />
+                    R. Caçador, 112 - Atiradores, Joinville - SC, 89203-610
+                    <br />
+                    (47) 99121-0089 <br />
+                    detrans.uet@joinville.sc.gov.br
+                </a>
+            </div>
+
+            <div>
+                <a id="aSocial">
+                    Redes Sociais <br />
+                    <hr style="color: white" />
+                    <i
+                        class="fa-brands fa-instagram"
+                        style="font-size: 16px; margin: 6px"
+                    ></i
+                    >Instagram<br />
+                    <i
+                        class="fa-brands fa-square-facebook"
+                        style="font-size: 16px; margin: 6px"
+                    ></i
+                    >Facebook <br />
+                    <i
+                        class="fa-brands fa-youtube"
+                        style="font-size: 14px; margin: 6px"
+                    ></i
+                    >YouTube <br />
+                </a>
+            </div>
+        </footer>
+
+        <script src="/assets/scripts/header.js"></script>
+    </body>
+</html>

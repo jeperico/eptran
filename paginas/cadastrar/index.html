@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EPTRAN</title>
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+
+        <!-- Swiper JS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="/assets/styles/swiper.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/assets/styles/main.css" />
+        <link rel="stylesheet" href="./form.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <button class="nav-btn icon-btn none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <img
+                    src="/assets/images/logos/logo-eptran-white.png"
+                    alt=""
+                    class="logo"
+                />
+                <a class="account-btn icon-btn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+            </div>
+
+            <div class="modal hide">
+                <div class="bg"></div>
+
+                <div class="sidebar hide">
+                    <div class="logos">
+                        <img
+                            src="/assets/images/logos/logo-eptran-white.png"
+                            alt="EPTRAN"
+                        />
+                        <hr />
+                        <img
+                            src="/assets/images/logos/logo-joinville-white.png"
+                            alt="Prefeitura de Joinville"
+                        />
+                    </div>
+                    <hr />
+                    <ul>
+                        <li>
+                            <a href="/paginas/inicio"
+                                ><i class="fa-solid fa-house"></i> Página
+                                Inicial</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/jogos"
+                                ><i class="fa-solid fa-gamepad"></i> Jogos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/postagens"
+                                ><i class="fa-solid fa-book-open"></i>
+                                Postagens</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/sobre-nos"
+                                ><i class="fa-solid fa-circle-info"></i> Sobre
+                                Nós</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="globe hide">
+                    <!-- <div class="wrapper"> -->
+                    <img
+                        class="world"
+                        src="/assets/images/world.png"
+                        alt="Mundo Bacana"
+                    />
+                    <img
+                        class="seal"
+                        src="/assets/images/seal-german-lg.png"
+                        alt="Foca de Foca no Trânsito"
+                    />
+                    <!-- </div> -->
+                </div>
+            </div>
+        </header>
+        <div class="header-box"></div>
+
+        <main>
+            <section>
+                <div class="container">
+                    <form class="form-container">
+                        <h2 class="form-title">CADASTRO</h2>
+                        <input
+                            type="text"
+                            class="form-input"
+                            placeholder="Nome Completo"
+                            required
+                        />
+                        <input type="date" class="form-input" required />
+                        <input
+                            type="text"
+                            class="form-input"
+                            placeholder="Escola"
+                            required
+                        />
+                        <label for="etapa-escolar" class="form-label"
+                            >Etapa escolar:</label
+                        >
+                        <select id="etapa-escolar" class="form-select" required>
+                            <option value="F1">Ensino Fundamental 1</option>
+                            <option value="F2">Ensino Fundamental 2</option>
+                            <option value="EM">Ensino Médio</option>
+                        </select>
+                        <label for="cep" class="form-label">Enter CEP:</label>
+                        <input
+                            type="text"
+                            id="cep"
+                            class="form-input"
+                            placeholder="00000-000"
+                            maxlength="9"
+                            required
+                        />
+                        <span class="row-container">
+                            <span>
+                                <label for="estado" class="form-label"
+                                    >Estado:</label
+                                >
+                                <select
+                                    id="estado"
+                                    class="form-select"
+                                    required
+                                >
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC" selected>SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </span>
+                            <span>
+                                <label for="cidade" class="form-label"
+                                    >Cidade:</label
+                                >
+                                <input
+                                    type="text"
+                                    id="cidade"
+                                    class="form-input"
+                                    placeholder="Cidade"
+                                    value="Joinville"
+                                    required
+                                />
+                            </span>
+                            <span>
+                                <label for="bairro" class="form-label"
+                                    >Bairro:</label
+                                >
+                                <input
+                                    type="text"
+                                    id="bairro"
+                                    class="form-input"
+                                    placeholder="Bairro"
+                                    required
+                                />
+                            </span>
+                        </span>
+
+                        <input
+                            type="email"
+                            class="form-input"
+                            placeholder="Email"
+                            required
+                        />
+                        <input
+                            type="password"
+                            class="form-input"
+                            placeholder="Senha"
+                            required
+                        />
+                        <input
+                            type="password"
+                            class="form-input"
+                            placeholder="Repetir Senha"
+                            required
+                        />
+                        <button type="submit" class="form-button">
+                            Cadastrar
+                        </button>
+                        <a href="../login/login.html" class="form-link"
+                            >Já possuo uma conta</a
+                        >
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="logos">
+                    <img
+                        src="/assets/images/logos/logo-eptran-white.png"
+                        alt="EPTRAN"
+                    />
+                    <hr />
+                    <img
+                        src="/assets/images/logos/logo-joinville-white.png"
+                        alt="Prefeitura de Joinville"
+                    />
+                </div>
+                <div class="adress">
+                    <h3>Informações de Contato</h3>
+                    <hr />
+                    <ul>
+                        <li>
+                            R. Caçador, 112 - Atiradores, Joinville - SC,
+                            89203-610
+                        </li>
+                        <li>(47) 99121-0089</li>
+                        <li>detrans.uet@joinville.sc.gov.br</li>
+                    </ul>
+                </div>
+                <div class="social-medias">
+                    <h3>Informações de Contato</h3>
+                    <hr />
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-youtube"></i>
+                            <a href="">YouTube</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <a href=""> Facebook</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom Scripts -->
+
+        <script>
+            var navBtn = document.querySelector(".nav-btn");
+            var navModalBg = document.querySelector("header .modal .bg");
+
+            navBtn.addEventListener("click", () => {
+                document
+                    .querySelector("header .modal")
+                    .classList.toggle("hide");
+                document.querySelector(".sidebar").classList.toggle("hide");
+            });
+
+            navModalBg.addEventListener("click", () => {
+                document.querySelector(".sidebar").classList.toggle("hide");
+                document.querySelector(".modal").classList.toggle("hide");
+            });
+
+            btn.addEventListener("click", () => {});
+        </script>
+        <script src="./cep-search.js"></script>
+
+        <!-- Swiper JS -->
+        <script src="/assets/scripts/swiper.js" type="module"></script>
+    </body>
+</html>
