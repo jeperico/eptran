@@ -360,8 +360,8 @@ section .container {
     gap: 1rem;
 }
 
-section .container .col,
-section .container .row {
+section .col,
+section .row {
     width: 100%;
     height: fit-content;
     align-items: center;
@@ -412,12 +412,20 @@ section .col p {
     width: fit-content;
 }
 
+section .start p {
+    justify-self: start;
+}
+
+section .end p {
+    justify-self: end;
+}
+
 section .row img {
     width: 100%;
 }
 
 section .row p {
-    width: fit-content;
+    width: 100%;
 }
 
 section .container h1 {
