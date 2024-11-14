@@ -20,6 +20,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="/assets/styles/main.css" />
+        <link rel="stylesheet" href="./form.css">
     </head>
 
     <body>
@@ -232,47 +233,71 @@
             </form>
         </div>
 
-        <footer id="footer">
-            <div>
-                <img src="img/Joinvillers.png" />
-            </div>
-
-            <div>
-                <a>
-                    Informações de Contato <br />
-                    <hr style="color: white" />
-                    R. Caçador, 112 - Atiradores, Joinville - SC, 89203-610
-                    <br />
-                    (47) 99121-0089 <br />
-                    detrans.uet@joinville.sc.gov.br
-                </a>
-            </div>
-
-            <div>
-                <a id="aSocial">
-                    Redes Sociais <br />
-                    <hr style="color: white" />
-                    <i
-                        class="fa-brands fa-instagram"
-                        style="font-size: 16px; margin: 6px"
-                    ></i
-                    >Instagram<br />
-                    <i
-                        class="fa-brands fa-square-facebook"
-                        style="font-size: 16px; margin: 6px"
-                    ></i
-                    >Facebook <br />
-                    <i
-                        class="fa-brands fa-youtube"
-                        style="font-size: 14px; margin: 6px"
-                    ></i
-                    >YouTube <br />
-                </a>
+        <footer>
+            <div class="container">
+                <div class="logos">
+                    <img
+                        src="/assets/images/logos/logo-eptran-white.png"
+                        alt="EPTRAN"
+                    />
+                    <hr />
+                    <img
+                        src="/assets/images/logos/logo-joinville-white.png"
+                        alt="Prefeitura de Joinville"
+                    />
+                </div>
+                <div class="adress">
+                    <h3>Informações de Contato</h3>
+                    <hr />
+                    <ul>
+                        <li>
+                            R. Caçador, 112 - Atiradores, Joinville - SC,
+                            89203-610
+                        </li>
+                        <li>(47) 99121-0089</li>
+                        <li>detrans.uet@joinville.sc.gov.br</li>
+                    </ul>
+                </div>
+                <div class="social-medias">
+                    <h3>Redes Sociais</h3>
+                    <hr />
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-youtube"></i>
+                            <a href="">YouTube</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <a href=""> Facebook</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
-
-        <script src="Template.js"></script>
-        <script src="cep-search.js"></script>
-        <script src="./change-form-section.js"></script>
+    
+        <script>
+            var navBtn = document.querySelector(".nav-btn");
+            var navModalBg = document.querySelector("header .modal .bg");
+    
+            navBtn.addEventListener("click", () => {
+                document
+                    .querySelector("header .modal")
+                    .classList.toggle("hide");
+                document.querySelector(".sidebar").classList.toggle("hide");
+            });
+    
+            navModalBg.addEventListener("click", () => {
+                document.querySelector(".sidebar").classList.toggle("hide");
+                document.querySelector(".modal").classList.toggle("hide");
+            });
+        </script>
+    
+        <!-- Swiper JS -->
+        <script src="/assets/scripts/swiper.js" type="module"></script>
     </body>
-</html>
+    </html>
+    
