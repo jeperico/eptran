@@ -614,7 +614,7 @@ section .post-carousel {
 
 .action-card p {
     width: 100%;
-    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
 }
 

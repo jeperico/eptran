@@ -1,49 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EPTRAN</title>
 
+        <!-- Font Awesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         />
-        <link rel="stylesheet" href="register.css" />
 
-        <title>Template Eptran</title>
+        <!-- Swiper JS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="/assets/styles/swiper.css" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Styles -->
+        <link rel="stylesheet" href="/assets/styles/main.css" />
     </head>
 
     <body>
-        <header id="header">
-            <i class="fa-solid fa-bars" id="bar" onclick="collapse()"></i>
-            <img src="img/epitrones.png" id="logo" />
-            <i class="fa-solid fa-user"></i>
-        </header>
-
-        <nav id="sideBar">
-            <div>
-                <a> Página Inicial </a> <br />
-                <a> Pagina de Noticias </a> <br />
-                <a> Conteudos </a> <br />
-                <a> Quem somos Nós </a> <br />
-                <a> </a> <br />
-                <a> </a> <br />
-                <a> </a> <br />
+        <header>
+            <div class="container">
+                <button class="nav-btn icon-btn none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <img
+                    src="/assets/images/logos/logo-eptran-white.png"
+                    alt=""
+                    class="logo"
+                />
+                <a href="/paginas/perfil" class="account-btn icon-btn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
             </div>
-        </nav>
 
-        <div id="overlay" onclick="collapse()"></div>
+            <div class="modal hide">
+                <div class="bg"></div>
 
-        <div id="foca">
-            <img src="img/planeta.png" id="planet" />
-            <img
-                src="img/IMG_4532-removebg-preview (1).png"
-                class="fa-bounce"
-                id="car"
-            />
-        </div>
+                <div class="sidebar hide">
+                    <div class="logos">
+                        <img
+                            src="/assets/images/logos/logo-eptran-white.png"
+                            alt="EPTRAN"
+                        />
+                        <hr />
+                        <img
+                            src="/assets/images/logos/logo-joinville-white.png"
+                            alt="Prefeitura de Joinville"
+                        />
+                    </div>
+                    <hr />
+                    <ul>
+                        <li>
+                            <a href="/paginas/inicio"
+                                ><i class="fa-solid fa-house"></i> Página
+                                Inicial</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/jogos"
+                                ><i class="fa-solid fa-gamepad"></i> Jogos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/postagens"
+                                ><i class="fa-solid fa-book-open"></i>
+                                Postagens</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/sobre-nos"
+                                ><i class="fa-solid fa-circle-info"></i> Sobre
+                                Nós</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="globe hide">
+                    <!-- <div class="wrapper"> -->
+                    <img
+                        class="world"
+                        src="/assets/images/world.png"
+                        alt="Mundo Bacana"
+                    />
+                    <img
+                        class="seal"
+                        src="/assets/images/seal-german-lg.png"
+                        alt="Foca de Foca no Trânsito"
+                    />
+                    <!-- </div> -->
+                </div>
+            </div>
+        </header>
+        <div class="header-box"></div>
+
+        <main>
 
         <div class="box">
             <form id="content">

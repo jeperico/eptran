@@ -1,36 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/assets/styles/swiper.css">
-</head>
-<body>
-    <header id="header">
-		<i class="fa-solid fa-bars" id="bar" onclick="collapse()"></i>			
-		<img src="/assets/images/logos/logo-eptran-white.png" id="logo" />
-		<i class="fa-solid fa-user"></i>
-	</header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EPTRAN</title>
 
-	<nav id="sideBar">
-		<a href="/pages/home/home.html">Página Inicial</a>
-		<a href="/pages/about-us/about-us.html">Quem somos Nós</a>
-		<a href="/pages/games/catalogue/catalogue.html">Jogos</a>
-		<a href="/pages/initial-series/initial-series.html">Séries Iniciais</a>
-		<a href="/pages/final-series/final-series.html">Séries Finais</a>
-		<a href="/pages/high-school/high-school.html">Ensino Médio</a>
-	</nav>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
 
-	<div id="overlay" onclick="collapse()"></div>
+        <!-- Swiper JS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="/assets/styles/swiper.css" />
 
-	<div id="foca">
-		<img src="/assets/images/world-02.png" id="planet">
-		<img src="/assets/images/seal.png" class="fa-bounce" id="car">
-	</div>
+        <!-- Styles -->
+        <link rel="stylesheet" href="/assets/styles/main.css" />
+    </head>
 
-    <main>
+    <body>
+        <header>
+            <div class="container">
+                <button class="nav-btn icon-btn none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <img
+                    src="/assets/images/logos/logo-eptran-white.png"
+                    alt=""
+                    class="logo"
+                />
+                <a href="/paginas/perfil" class="account-btn icon-btn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+            </div>
+
+            <div class="modal hide">
+                <div class="bg"></div>
+
+                <div class="sidebar hide">
+                    <div class="logos">
+                        <img
+                            src="/assets/images/logos/logo-eptran-white.png"
+                            alt="EPTRAN"
+                        />
+                        <hr />
+                        <img
+                            src="/assets/images/logos/logo-joinville-white.png"
+                            alt="Prefeitura de Joinville"
+                        />
+                    </div>
+                    <hr />
+                    <ul>
+                        <li>
+                            <a href="/paginas/inicio"
+                                ><i class="fa-solid fa-house"></i> Página
+                                Inicial</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/jogos"
+                                ><i class="fa-solid fa-gamepad"></i> Jogos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/postagens"
+                                ><i class="fa-solid fa-book-open"></i>
+                                Postagens</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/paginas/sobre-nos"
+                                ><i class="fa-solid fa-circle-info"></i> Sobre
+                                Nós</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="globe hide">
+                    <!-- <div class="wrapper"> -->
+                    <img
+                        class="world"
+                        src="/assets/images/world.png"
+                        alt="Mundo Bacana"
+                    />
+                    <img
+                        class="seal"
+                        src="/assets/images/seal-german-lg.png"
+                        alt="Foca de Foca no Trânsito"
+                    />
+                    <!-- </div> -->
+                </div>
+            </div>
+        </header>
+        <div class="header-box"></div>
+
+        <main>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">Slide 1</div>

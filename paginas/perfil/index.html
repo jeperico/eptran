@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
-        <script>
-            window.location.href = "/paginas/cadastrar"
-        </script>
-
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EPTRAN</title>
@@ -20,6 +16,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link rel="stylesheet" href="/assets/styles/swiper.css" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="/assets/styles/main.css" />
@@ -36,6 +33,13 @@
                     alt=""
                     class="logo"
                 />
+                <a href="/paginas/inicio/index.html" class="logo">
+                    <img
+                        src="/assets/images/logos/logo-eptran-white.png"
+                        alt=""
+                        class="logo"
+                    />
+                </a>
                 <a href="/paginas/perfil" class="account-btn icon-btn">
                     <i class="fa-solid fa-circle-user"></i>
                 </a>
@@ -233,26 +237,8 @@
         </footer>
 
         <script>
-            let infoBtn = document.querySelector(".selectors .info");
-            let securityBtn = document.querySelector(".selectors .security");
-            let infoSection = document.querySelector("section.data.info");
-            let securitySection = document.querySelector("section.data.security");
-
-            infoBtn.addEventListener("click", () => {
-                infoSection.classList.remove("hidden");
-                securitySection.classList.add("hidden");
-            });
-
-            securityBtn.addEventListener("click", () => {
-                infoSection.classList.add("hidden");
-                securitySection.classList.remove("hidden");
-            });
-            
-        </script>
-
-        <script>
-            let navBtn = document.querySelector(".nav-btn");
-            let navModalBg = document.querySelector("header .modal .bg");
+            var navBtn = document.querySelector(".nav-btn");
+            var navModalBg = document.querySelector("header .modal .bg");
 
             navBtn.addEventListener("click", () => {
                 document
