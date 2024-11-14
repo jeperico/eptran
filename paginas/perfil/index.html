@@ -237,8 +237,26 @@
         </footer>
 
         <script>
-            var navBtn = document.querySelector(".nav-btn");
-            var navModalBg = document.querySelector("header .modal .bg");
+            let infoBtn = document.querySelector(".selectors .info");
+            let securityBtn = document.querySelector(".selectors .security");
+            let infoSection = document.querySelector("section.data.info");
+            let securitySection = document.querySelector("section.data.security");
+
+            infoBtn.addEventListener("click", () => {
+                infoSection.classList.remove("hidden");
+                securitySection.classList.add("hidden");
+            });
+
+            securityBtn.addEventListener("click", () => {
+                infoSection.classList.add("hidden");
+                securitySection.classList.remove("hidden");
+            });
+            
+        </script>
+
+        <script>
+            let navBtn = document.querySelector(".nav-btn");
+            let navModalBg = document.querySelector("header .modal .bg");
 
             navBtn.addEventListener("click", () => {
                 document
