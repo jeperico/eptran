@@ -1,9 +1,16 @@
+/* #region Imports */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* #endregion */
+
+/* #region root */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -26,18 +33,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-a i,
-button i,
-span i,
-i {
-    user-select: none !important;
-    -moz-user-select: none !important;
-    -webkit-user-select: none !important;
-    -webkit-user-drag: none !important;
-}
+/* #endregion */
 
 /* #region Botão */
 
@@ -720,12 +718,20 @@ section.data {
 
 /* #region Form */
 
-form {
+.page-form form {
+    min-width: 40rem;
     width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-self: center;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 form .line {
@@ -734,19 +740,43 @@ form .line {
     gap: 1rem;
 }
 
+form span.title {
+    text-transform: uppercase;
+    width: 100%;
+    background: var(--blue);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    .page-form form {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .page-form form .line {
+        flex-direction: column;
+    }
+}
+
 .input {
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid var(--blue);
     padding: 0.5rem;
     border-radius: 5px;
     width: 100%;
-    overflow: hidden;
     gap: 0.25rem;
 }
 
 .input label {
     font-size: medium;
+    text-wrap: nowrap;
+    color: var(--blue);
 }
 
 .input input,
@@ -757,11 +787,65 @@ form .line {
     font-size: medium;
 }
 
-.input input:focus {
+.input .turn {
+    width: 20px;
+    text-align: center;
+    color: var(--blue);
+}
+
+.input .turn:hover {
+    transform: scale(1);
+    filter: initial;
+}
+
+.input .turn i {
+    width: 100%;
+}
+
+input[type="date"] {
+    cursor: text;
+}
+
+select {
+    cursor: pointer;
+}
+
+.input input:focus,
+.input select:focus {
     outline: none;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+form .finish {
+    display: flex;
+    flex-direction: column;
+}
+
+form .finish a {
+    width: fit-content;
+}
+
+form .finish .btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 /* #endregion */
+
+/* #region sla */
 
 .none {
     all: initial;
@@ -775,6 +859,18 @@ button.none {
 .hidden {
     display: none;
 }
+
+a i,
+button i,
+span i,
+i {
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-user-drag: none !important;
+}
+
+/* #endregion */
 
 /* #region MediaQueries */
 

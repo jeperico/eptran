@@ -5,22 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EPTRAN</title>
 
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
         <!-- Font Awesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         />
 
-        <!-- Swiper JS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="/assets/styles/swiper.css" />
-
         <!-- Styles -->
         <link rel="stylesheet" href="/assets/styles/main.css" />
-        <!-- <link rel="stylesheet" href="./form.css" /> -->
     </head>
 
     <body>
@@ -101,152 +96,147 @@
         <div class="header-box"></div>
 
         <main>
-            <!-- <section>
-                <div class="container">
-                    <form class="form-container">
-                        <h2 class="form-title">CADASTRO</h2>
-                        <input
-                            type="text"
-                            class="form-input"
-                            placeholder="Nome Completo"
-                            required
-                        />
-                        <input type="date" class="form-input" required />
-                        <input
-                            type="text"
-                            class="form-input"
-                            placeholder="Escola"
-                            required
-                        />
-                        <label for="etapa-escolar" class="form-label"
-                            >Etapa escolar:</label
-                        >
-                        <select id="etapa-escolar" class="form-select" required>
-                            <option value="F1">Ensino Fundamental 1</option>
-                            <option value="F2">Ensino Fundamental 2</option>
-                            <option value="EM">Ensino Médio</option>
-                        </select>
-                        <label for="cep" class="form-label">Enter CEP:</label>
-                        <input
-                            type="text"
-                            id="cep"
-                            class="form-input"
-                            placeholder="00000-000"
-                            maxlength="9"
-                            required
-                        />
-                        <span class="row-container">
-                            <span>
-                                <label for="estado" class="form-label"
-                                    >Estado:</label
-                                >
-                                <select
-                                    id="estado"
-                                    class="form-select"
-                                    required
-                                >
-                                    <option value="AC">AC</option>
-                                    <option value="AL">AL</option>
-                                    <option value="AP">AP</option>
-                                    <option value="BA">BA</option>
-                                    <option value="CE">CE</option>
-                                    <option value="DF">DF</option>
-                                    <option value="ES">ES</option>
-                                    <option value="GO">GO</option>
-                                    <option value="MA">MA</option>
-                                    <option value="MT">MT</option>
-                                    <option value="MS">MS</option>
-                                    <option value="MG">MG</option>
-                                    <option value="PA">PA</option>
-                                    <option value="PB">PB</option>
-                                    <option value="PR">PR</option>
-                                    <option value="PE">PE</option>
-                                    <option value="PI">PI</option>
-                                    <option value="RJ">RJ</option>
-                                    <option value="RN">RN</option>
-                                    <option value="RS">RS</option>
-                                    <option value="RO">RO</option>
-                                    <option value="RR">RR</option>
-                                    <option value="SC">SC</option>
-                                    <option value="SP">SP</option>
-                                    <option value="SE">SE</option>
-                                    <option value="TO">TO</option>
-                                </select>
-                            </span>
-                            <span>
-                                <label for="cidade" class="form-label"
-                                    >Cidade:</label
-                                >
-                                <input
-                                    type="text"
-                                    id="cidade"
-                                    class="form-input"
-                                    placeholder="Cidade"
-                                    value="Joinville"
-                                    required
-                                />
-                            </span>
-                            <span>
-                                <label for="bairro" class="form-label"
-                                    >Bairro:</label
-                                >
-                                <input
-                                    type="text"
-                                    id="bairro"
-                                    class="form-input"
-                                    placeholder="Bairro"
-                                    required
-                                />
-                            </span>
-                        </span>
-
-                        <input
-                            type="email"
-                            class="form-input"
-                            placeholder="Email"
-                            required
-                        />
-                        <input
-                            type="password"
-                            class="form-input"
-                            placeholder="Senha"
-                            required
-                        />
-                        <input
-                            type="password"
-                            class="form-input"
-                            placeholder="Repetir Senha"
-                            required
-                        />
-                        <button type="submit" class="form-button">
-                            Cadastrar
-                        </button>
-                        <a href="../login/login.html" class="form-link"
-                            >Já possuo uma conta</a
-                        >
-                    </form>
-                </div>
-            </section> -->
             <section>
-                <div class="container">
+                <div class="container page-form">
                     <form>
-                        <div class="line">
+                        <span class="title">Cadastro</span>
+                        <div class="form-section active">
+                            <div class="line">
+                                <div class="input">
+                                    <label>Nome: </label>
+                                    <input type="text" name="name" />
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="input">
+                                    <label>Escola: </label>
+                                    <input type="text" name="school" />
+                                </div>
+                                <div class="input">
+                                    <label>Etapa Escolar: </label>
+                                    <select name="school-level">
+                                        <option value="">Nenhum</option>
+                                        <option value="f1">
+                                            Fundamental 1
+                                        </option>
+                                        <option value="f2">
+                                            Fundamental 2
+                                        </option>
+                                        <option value="em">Ensino Médio</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="input">
+                                    <label>Gênero: </label>
+                                    <select name="gender">
+                                        <option value="m">Masculino</option>
+                                        <option value="f">Feminino</option>
+                                        <option value="o">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="input">
+                                    <label>Data de Nascimento: </label>
+                                    <input type="date" name="birthdate" />
+                                </div>
+                            </div>
                             <div class="input">
-                                <label>Nome: </label>
-                                <input type="text" />
+                                <label>CEP: </label>
+                                <input type="number" placeholder="123456-78" />
+                            </div>
+                            <div class="line">
+                                <div class="input uf">
+                                    <label>UF: </label>
+                                    <select name="uf">
+                                        <option disabled selected></option>
+                                        <option value="ac">AC</option>
+                                        <option value="al">AL</option>
+                                        <option value="ap">AP</option>
+                                        <option value="ba">BA</option>
+                                        <option value="ce">CE</option>
+                                        <option value="df">DF</option>
+                                        <option value="es">ES</option>
+                                        <option value="go">GO</option>
+                                        <option value="ma">MA</option>
+                                        <option value="mt">MT</option>
+                                        <option value="ms">MS</option>
+                                        <option value="mg">MG</option>
+                                        <option value="pa">PA</option>
+                                        <option value="pb">PB</option>
+                                        <option value="pr">PR</option>
+                                        <option value="pe">PE</option>
+                                        <option value="pi">PI</option>
+                                        <option value="rj">RJ</option>
+                                        <option value="rn">RN</option>
+                                        <option value="rs">RS</option>
+                                        <option value="ro">RO</option>
+                                        <option value="rr">RR</option>
+                                        <option value="sc">SC</option>
+                                        <option value="sp">SP</option>
+                                        <option value="se">SE</option>
+                                        <option value="to">TO</option>
+                                    </select>
+                                </div>
+                                <div class="input">
+                                    <label>Cidade: </label>
+                                    <input type="text" name="city" />
+                                </div>
+                                <div class="input">
+                                    <label>Bairro: </label>
+                                    <input type="text" name="area" />
+                                </div>
                             </div>
                         </div>
-                        <div class="line">
+                        <div class="form-section hidden">
                             <div class="input">
-                                <label>Escola: </label>
-                                <input type="text" />
+                                <label>E-mail: </label>
+                                <input type="email" name="email" />
                             </div>
-                            <div class="input">
-                                <label>Etapa Escolar: </label>
-                                <select>
-                                    <option value="">SESI</option>
-                                    <option value="">Hans Müller</option>
-                                </select>
+                            <div class="line password">
+                                <div class="input">
+                                    <label>Senha: </label>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        minlength="8"
+                                        maxlength="31"
+                                    />
+                                    <button
+                                        type="button"
+                                        class="turn hide none"
+                                    >
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                                <div class="input">
+                                    <label>Repetir Senha: </label>
+                                    <input
+                                        type="password"
+                                        name="repeat-password"
+                                        minlength="8"
+                                        maxlength="31"
+                                    />
+                                    <button
+                                        type="button"
+                                        class="turn hide none"
+                                    >
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="finish">
+                            <a href="/paginas/login">Já possuo uma conta</a>
+                            <div class="btns">
+                                <button type="button" class="nav prev hidden">
+                                    Anterior
+                                </button>
+                                <button type="button" class="nav next">
+                                    Próximo
+                                </button>
+                                <button type="submit" class="hidden">
+                                    Enviar
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -280,7 +270,7 @@
                     </ul>
                 </div>
                 <div class="social-medias">
-                    <h3>Informações de Contato</h3>
+                    <h3>Redes Sociais</h3>
                     <hr />
                     <ul>
                         <li>
@@ -301,28 +291,8 @@
         </footer>
 
         <!-- Custom Scripts -->
-
-        <script>
-            var navBtn = document.querySelector(".nav-btn");
-            var navModalBg = document.querySelector("header .modal .bg");
-
-            navBtn.addEventListener("click", () => {
-                document
-                    .querySelector("header .modal")
-                    .classList.toggle("hide");
-                document.querySelector(".sidebar").classList.toggle("hide");
-            });
-
-            navModalBg.addEventListener("click", () => {
-                document.querySelector(".sidebar").classList.toggle("hide");
-                document.querySelector(".modal").classList.toggle("hide");
-            });
-
-            btn.addEventListener("click", () => {});
-        </script>
-        <script src="./cep-search.js"></script>
-
-        <!-- Swiper JS -->
-        <script src="/assets/scripts/swiper.js" type="module"></script>
+        <script src="/assets/scripts/sidebar.js"></script>
+        <!-- <script src="./cep-search.js"></script> -->
+        <script src="./form.js"></script>
     </body>
 </html>
