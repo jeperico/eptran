@@ -1,32 +1,4 @@
 $(document).ready(() => {
-    // $("#change-section").on("click", () => {
-    //     $(".form-section").each((i, el) => {
-    //         $(el).toggleClass("hidden");
-    //         $("#change-section").html(
-    //             i && !$(el).hasClass("hidden") ? "Anterior" : "Próximo"
-    //         );
-    //         $("#send").toggleClass("hidden", i && $(el).hasClass("hidden"));
-    //     });
-    // });
-
-    // $("#content").on("submit", (event) => {
-    //     event.preventDefault();
-    //     let formData = new FormData(event.target);
-
-    //     for (const [key, value] of formData) {
-    //         if (key != "escola" && key != "etapa-escolar" && !value) {
-    //             alert(`O campo de ${key} não foi prenchido.`);
-    //             return;
-    //         }
-    //     }
-
-    //     window.location.href = "../Login/Login.html";
-    // });
-
-    // $("input[type='password']").each((i, el) => {
-    //     $(el).closest(".input");
-    // });
-
     $("form .next").on("click", () => changeSection(1));
     $("form .prev").on("click", () => changeSection(-1));
 
@@ -41,35 +13,27 @@ $(document).ready(() => {
 });
 
 const changeSection = (dir) => {
+    if ($(".page-form").length) {
+        window.scrollTo(window.scrollX, 0);
+    }
     let chosen = false;
-    let current = null;
+    let current = 0;
     let secNum = $("form .form-section").length;
 
-    console.log($("form .form-section").toArray());
-
-    let mapArray = dir
-        ? $("form .form-section").toArray()
-        : $("form .form-section").toArray().reverse();
+    let mapArray =
+        dir > 0
+            ? $("form .form-section").toArray()
+            : $("form .form-section").toArray().reverse();
 
     mapArray.forEach((el, j) => {
-        current = chosen ? j : current;
+        current = chosen ? j - (dir < 0 ? secNum - 1 : 0) : current;
         let c = $(el).hasClass("active");
         $(el).toggleClass("active", chosen);
         $(el).toggleClass("hidden", !chosen);
         chosen = c;
     });
 
-    if (current == 0) {
-        $("form .prev").toggleClass("hidden", true);
-        $("form .next").toggleClass("hidden", false);
-        $("form button[type='submit']").toggleClass("hidden", true);
-    } else if (current == secNum - 1) {
-        $("form .prev").toggleClass("hidden", false);
-        $("form .next").toggleClass("hidden", true);
-        $("form button[type='submit']").toggleClass("hidden", false);
-    } else {
-        $("form .prev").toggleClass("hidden", false);
-        $("form .next").toggleClass("hidden", false);
-        $("form button[type='submit']").toggleClass("hidden", true);
-    }
+    $("form .prev").toggleClass("hidden", current == 0);
+    $("form .next").toggleClass("hidden", current == secNum - 1);
+    $("form button[type='submit']").toggleClass("hidden", current < secNum - 1);
 };

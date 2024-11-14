@@ -769,8 +769,16 @@ form span.title {
     border: 1px solid var(--blue);
     padding: 0.5rem;
     border-radius: 5px;
-    width: 100%;
+    flex: 1;
     gap: 0.25rem;
+}
+
+.input.uf {
+    flex: 1;
+}
+
+.input.nuf {
+    flex: 3;
 }
 
 .input label {
@@ -781,7 +789,7 @@ form span.title {
 
 .input input,
 .input select {
-    flex: 1;
+    width: 100%;
     border: none;
     background: none;
     font-size: medium;
