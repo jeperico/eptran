@@ -784,6 +784,9 @@ form span.title {
 .input label {
     font-size: medium;
     text-wrap: nowrap;
+    word-wrap: none;
+    width: fit-content;
+    white-space: pre;
     color: var(--blue);
 }
 
